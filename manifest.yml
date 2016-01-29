@@ -26,6 +26,9 @@ url_to_dependency_map:
   - match: openjdk1.8-latest
     name: openjdk1.8-latest
     version: 1.8.0_65
+  - match: ghostscript
+    name: ghostscript
+    version: 9.18
 
 dependencies:
   - name: node
@@ -116,6 +119,12 @@ dependencies:
     version: ruby-2.2.2-jruby-9.0.4.0
     uri: https://pivotal-buildpacks.s3.amazonaws.com/concourse-binaries/jruby/jruby-9.0.4.0_ruby-2.2.2-linux-x64.tgz
     md5: 13411f72b486f6cabb625421bf070ea2
+    cf_stacks:
+      - cflinuxfs2
+  - name: ghostscript
+    version: 9.18
+    uri: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs918/ghostscript-9.18-linux-x86_64.tgz
+    md5: 67abc14f1034222d13ecef6cdd4ae875
     cf_stacks:
       - cflinuxfs2
 
